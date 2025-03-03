@@ -1,112 +1,51 @@
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>Chess Web Page</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
-    <style>
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            left: 100%;
-            top: 0;
-            background-color: #2d3748;
-            width: 100%;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            z-index: 1;
-        }
-
-        .dropdown-content a {
-            color: white;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-        }
-
-        .dropdown-content a:hover {
-            background-color: #4a5568;
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-    </style>
+    <title>Login & Register</title>
 </head>
-<body class="bg-gray-800 text-white font-sans">
-<div class="flex">
-    <!-- Sidebar -->
-    <div class="w-1/4 bg-gray-900 p-4 fixed h-full">
-        <div class="flex items-center mb-6">
-            <img alt="Chess.com logo" class="mr-2" height="30" src="https://storage.googleapis.com/a1aa/image/QJ3zAnPedoYyIRLtZR9IzJQ7rr5Rb9eWY05xtOgNKH0.jpg" width="30"/>
-            <span class="text-xl font-bold">Chess.com</span>
-        </div>
-        <nav class="space-y-4 relative">
-            <div class="dropdown">
-                <a class="flex items-center text-gray-400 hover:text-white" href="#">
-                    <i class="fas fa-chess mr-2"></i> Chơi
-                </a>
-                <div class="dropdown-content w-1/4">
-                    <a href="#">Chơi trực tuyến</a>
-                    <a href="#">Chơi với máy</a>
-                    <a href="#">Bảng xếp hạng</a>
-                </div>
-            </div>
-            <a class="flex items-center text-gray-400 hover:text-white" href="#">
-                <i class="fas fa-puzzle-piece mr-2"></i> Câu đố
-            </a>
-            <a class="flex items-center text-gray-400 hover:text-white" href="#">
-                <i class="fas fa-book mr-2"></i> Học
-            </a>
-            <a class="flex items-center text-gray-400 hover:text-white" href="#">
-                <i class="fas fa-eye mr-2"></i> Theo dõi
-            </a>
-            <a class="flex items-center text-gray-400 hover:text-white" href="#">
-                <i class="fas fa-newspaper mr-2"></i> Tin tức
-            </a>
-            <a class="flex items-center text-gray-400 hover:text-white" href="#">
-                <i class="fas fa-users mr-2"></i> Cộng đồng
-            </a>
-            <a class="flex items-center text-gray-400 hover:text-white" href="#">
-                <i class="fas fa-ellipsis-h mr-2"></i> Thêm nữa
-            </a>
-        </nav>
-        <div class="mt-6">
-            <input class="w-full p-2 bg-gray-700 text-white rounded" placeholder="Tìm kiếm" type="text"/>
-        </div>
-        <div class="mt-4">
-            <button class="w-full bg-green-500 text-white py-2 rounded mb-2"><a href="logup.html">Đăng ký</a></button>
-            <button class="w-full bg-gray-700 text-white py-2 rounded"><a href="login.html">Đăng nhập</a></button>
-        </div>
-    </div>
-    <!-- Main Content -->
-    <div class="w-3/4 ml-auto p-6">
-        <div class="flex justify-center items-start mb-6">
-            <img alt="Chess board" class="w-1/2" height="300" src="https://storage.googleapis.com/a1aa/image/EZrC4XZw3AeacXSzWPFECMQTi3VofcpV9dxZw2SY7w8.jpg" width="300"/>
-            <div class="w-1/2 ml-6">
-                <h1 class="text-3xl font-bold mb-4">Chơi trực tuyến tại trang web cờ vua số 1!</h1>
-                <p class="text-gray-400 mb-4">19,107,366 Các ván đấu hôm nay    116,727 Chơi ngay</p>
-                <div class="relative dropdown">
-                    <button class="w-full bg-green-500 text-white py-2 rounded mb-4 flex items-center justify-center">
-                        <i class="fas fa-chess mr-2"></i> Chơi trực tuyến
-                    </button>
-                    <div class="dropdown-content">
-                        <a href="#">Play Bots</a>
-                        <a href="#">Play Friends</a>
-                        <a href="#">Play Random</a>
-                    </div>
-                </div>
-                <button class="w-full bg-gray-700 text-white py-2 rounded flex items-center justify-center">
-                    <i class="fas fa-desktop mr-2"></i> Chơi với máy tính
-                </button>
-            </div>
-        </div>
-        <div class="bg-gray-900 p-6 rounded">
-            <h2 class="text-2xl font-bold mb-4">Giải thế cờ</h2>
-            <img alt="Chess puzzle" class="w-full mb-4" height="300" src="https://storage.googleapis.com/a1aa/image/WcDa9w0SiGJuVEabkvr75343y7ixoY9HqFtYJWF70i4.jpg" width="300"/>
-            <button class="w-full bg-green-500 text-white py-2 rounded">Giải câu đố</button>
-        </div>
-    </div>
-</div>
+<body>
+    <h2>Register</h2>
+    <input type="text" id="reg-username" placeholder="Username">
+    <input type="email" id="reg-email" placeholder="Email">
+    <input type="password" id="reg-password" placeholder="Password">
+    <button onclick="register()">Register</button>
+    
+    <h2>Login</h2>
+    <input type="email" id="login-email" placeholder="Email">
+    <input type="password" id="login-password" placeholder="Password">
+    <button onclick="login()">Login</button>
+
+    <script>
+        const API_URL = "http://localhost/web_chess_system"; // Địa chỉ API trên Laptop
+
+        function register() {
+            fetch(API_URL + "/logup.php", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    username: document.getElementById("reg-username").value,
+                    email: document.getElementById("reg-email").value,
+                    password: document.getElementById("reg-password").value
+                })
+            })
+            .then(res => res.json())
+            .then(data => alert(data.success || data.error))
+            .catch(err => console.error(err));
+        }
+
+        function login() {
+            fetch(API_URL + "/login.php", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    email: document.getElementById("login-email").value,
+                    password: document.getElementById("login-password").value
+                })
+            })
+            .then(res => res.json())
+            .then(data => alert(data.success || data.error))
+            .catch(err => console.error(err));
+        }
+    </script>
 </body>
 </html>
